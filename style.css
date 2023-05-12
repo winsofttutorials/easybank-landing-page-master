@@ -57,10 +57,27 @@ nav ul {
 nav ul li {
   display: inline-block;
   margin: 0 15px;
+  position: relative;
+  transition: background 0.3s;
 }
 
-nav ul a {
+nav ul li a {
   color: var(--Dark-Blue);
+}
+
+nav ul li::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  bottom: -26px;
+  left: 0;
+  position: absolute;
+  background: var(--Lime-Green);
+  display: none;
+}
+
+nav ul li.activeLink::after {
+  display: block;
 }
 
 .invite-btn {
@@ -72,6 +89,10 @@ nav ul a {
   border-radius: 20px;
   cursor: pointer;
   transition: color 0.5s;
+}
+
+.invite-btn:hover {
+  background: var(--Lime-Green);
 }
 
 .hero {
@@ -200,6 +221,10 @@ article {
   color: var(--Dark-Blue);
 }
 
+.headline-msg:hover {
+  color: var(--Lime-Green);
+}
+
 .text-msg {
   font-size: 16px;
   max-width: 265px;
@@ -234,14 +259,18 @@ footer {
   color: var(--Grayish-Blue);
 }
 
-ul li {
+footer ul li {
   margin-bottom: 10px;
   list-style: none;
 }
 
-ul li a {
+footer ul li a {
   color: var(--Grayish-Blue);
   font-size: 12px;
+}
+
+footer ul li a:hover {
+  color: var(--Lime-Green);
 }
 
 .foot-col {
@@ -249,6 +278,20 @@ ul li a {
   flex-direction: column;
   justify-content: space-between;
 }
+
+.footer-logo {
+  width: 100px;
+}
+
+.socials img {
+  margin: 4px;
+}
+
+.socials img:hover {
+  fill: #31d35c;
+  stroke: #31d35c;
+}
+
 /* media query */
 
 @media (max-width: 375px) {
