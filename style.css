@@ -334,7 +334,7 @@ input[type="checkbox"] {
 
 /* media query */
 
-@media (max-width: 375px) {
+@media (max-width: 376px) {
   #menu-icon {
     display: block;
   }
