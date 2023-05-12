@@ -219,6 +219,7 @@ article {
   font-weight: 500;
   margin: 15px 0;
   color: var(--Dark-Blue);
+  cursor: pointer;
 }
 
 .headline-msg:hover {
@@ -318,15 +319,51 @@ footer ul li a:hover {
   color: var(--White);
 }
 
+.menuIcon {
+  display: flex;
+  align-items: center;
+}
+
+#menu-icon {
+  display: none;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
 /* media query */
 
 @media (max-width: 375px) {
+  #menu-icon {
+    display: block;
+  }
+
   nav {
     justify-content: space-between;
     padding: 30px 20px;
+    position: relative;
   }
   nav ul {
     display: none;
+    position: absolute;
+    width: 90%;
+    min-height: 200px;
+    background-color: var(--White);
+    top: 100px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 30px 0;
+    line-height: 10px;
+  }
+
+  nav ul li a {
+    font-weight: 600;
   }
 
   nav .invite-btn {
@@ -336,11 +373,12 @@ footer ul li a:hover {
   .hero {
     background-image: url("./images/bg-intro-mobile.svg");
     background-size: 380px 380px;
-    background-position: top;
+    background-position: -5px -30px;
     background-repeat: no-repeat;
     grid-template-columns: 1fr;
     padding: 0 4% 80px;
-    min-height: 100vh;
+    margin-top: 0;
+    /* min-height: 100vh; */
   }
   .col2 {
     order: -1;
@@ -349,7 +387,7 @@ footer ul li a:hover {
 
   .mockups-img {
     position: absolute;
-    top: -100px;
+    top: -120px;
     right: 0px;
     z-index: 1;
     width: 100%;
@@ -358,7 +396,7 @@ footer ul li a:hover {
   .displayText {
     max-width: 350px;
     text-align: center;
-    margin-top: 400px;
+    margin-top: 300px;
     /* font-size: 24px; */
   }
   .display-info {

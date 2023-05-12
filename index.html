@@ -26,8 +26,8 @@
     <main>
       <nav>
         <img src="images/logo.svg" alt="logo" class="logo" />
-        <ul>
-          <li class="tabLinks activeLink" onmouseover="mouseOvering()">
+        <ul id="navLinks">
+          <li class="tabLinks" onmouseover="mouseOvering()">
             <a href="#">Home</a>
           </li>
           <li class="tabLinks" onmouseover="mouseOvering()">
@@ -44,8 +44,17 @@
           </li>
         </ul>
         <button type="button" class="invite-btn">Request Invite</button>
+        <label for="checkboxbtn" class="menuIcon">
+          <input type="checkbox" id="checkboxbtn" />
+          <img
+            src="./images/icon-hamburger.svg"
+            alt="menu"
+            id="menu-icon"
+            onclick="navOpen()"
+          />
+        </label>
       </nav>
-      <section class="hero">
+      <section class="hero" id="heroSegment">
         <div class="col">
           <h1 class="displayText">Next generation digital banking</h1>
           <p class="display-info">
@@ -60,6 +69,7 @@
             src="./images/image-mockups.png"
             alt="mockups-img"
             class="mockups-img"
+            id="mockUp"
           />
         </div>
       </section>
