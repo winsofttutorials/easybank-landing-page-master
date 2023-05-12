@@ -281,15 +281,41 @@ footer ul li a:hover {
 
 .footer-logo {
   width: 100px;
+  margin-bottom: 50px;
 }
 
-.socials img {
-  margin: 4px;
+.socials {
+  text-align: center;
+  display: flex;
+  margin: auto;
 }
 
-.socials img:hover {
-  fill: #31d35c;
-  stroke: #31d35c;
+.socials .fa-brands {
+  margin: 5px;
+  color: #fff;
+  font-size: 24px;
+}
+
+.socials .fa-youtube {
+  font-size: 13px;
+  color: var(--Dark-Blue);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* text-align: center; */
+  background: var(--White);
+}
+
+.socials .fa-brands:hover {
+  color: var(--Lime-Green);
+}
+
+.socials .fa-youtube:hover {
+  background-color: var(--Lime-Green);
+  color: var(--White);
 }
 
 /* media query */
